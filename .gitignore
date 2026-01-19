@@ -1,0 +1,10 @@
+# Vivado generated directories (project-specific)
+artyz7_bringup.cache/
+artyz7_bringup.hw/
+artyz7_bringup.ip_user_files/
+artyz7_bringup.runs/
+artyz7_bringup.sim/
+
+# Vivado project file
+artyz7_bringup.xpr
+
