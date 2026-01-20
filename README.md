@@ -16,4 +16,7 @@ based system (Digilent Arty Z7-10) up to BOOT.bin generation.
 - U-Boot: built from u-boot-xlnx
 - BOOT.bin: generated via bootgen
 
-## Directory Structure
+### Status
+- [x] BOOT.bin generated
+- [ ] SD boot verified
+- [ ] U-Boot prompt confirmed
