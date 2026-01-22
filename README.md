@@ -20,6 +20,7 @@ based system (Digilent Arty Z7-10) up to BOOT.bin generation.
 - [ ] SD boot verified
 - [ ] U-Boot prompt confirmed
 
+## 01-22
 
 ## Bring-up Attempt: SD Card Boot (Failed)
 
@@ -38,10 +39,6 @@ without sufficient understanding of the Arty Z7-10 board boot characteristics.
 - UART:
   - 115200 baud
   - USB-UART (FTDI) confirmed working
-
-
-
-## 01-22
 
 ### Observed Behavior
 - No UART output on power-up
