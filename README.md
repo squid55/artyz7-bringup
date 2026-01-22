@@ -1,4 +1,4 @@
-01-19
+##01-19
 
 # Arty Z7-10 Bring-up (FSBL + U-Boot)
 This repository documents the early bring-up process of a Zynq-7000
@@ -41,7 +41,7 @@ without sufficient understanding of the Arty Z7-10 board boot characteristics.
 
 
 
-01-22
+##01-22
 
 ### Observed Behavior
 - No UART output on power-up
