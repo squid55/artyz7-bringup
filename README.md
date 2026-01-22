@@ -1,5 +1,4 @@
 ## 01-19
-
 # Arty Z7-10 Bring-up (FSBL + U-Boot)
 This repository documents the early bring-up process of a Zynq-7000
 based system (Digilent Arty Z7-10) up to BOOT.bin generation.
@@ -20,8 +19,9 @@ based system (Digilent Arty Z7-10) up to BOOT.bin generation.
 - [ ] SD boot verified
 - [ ] U-Boot prompt confirmed
 
-## 01-22
 
+
+## 01-22
 ## Bring-up Attempt: SD Card Boot (Failed)
 
 At the early stage of bring-up, SD card boot was attempted first.
