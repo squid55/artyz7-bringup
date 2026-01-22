@@ -1,3 +1,5 @@
+01-19
+
 # Arty Z7-10 Bring-up (FSBL + U-Boot)
 This repository documents the early bring-up process of a Zynq-7000
 based system (Digilent Arty Z7-10) up to BOOT.bin generation.
@@ -17,3 +19,55 @@ based system (Digilent Arty Z7-10) up to BOOT.bin generation.
 - [x] BOOT.bin generated
 - [ ] SD boot verified
 - [ ] U-Boot prompt confirmed
+
+
+## Bring-up Attempt: SD Card Boot (Failed)
+
+At the early stage of bring-up, SD card boot was attempted first.
+This choice was made by following common Zynq bring-up examples,
+without sufficient understanding of the Arty Z7-10 board boot characteristics.
+
+### Configuration
+- Boot Mode Jumper: SD
+- SD Card:
+  - FAT32 formatted
+  - BOOT.bin placed in root directory
+- BOOT.bin contents:
+  - FSBL (fsbl.elf)
+  - PL bitstream (.bit)
+- UART:
+  - 115200 baud
+  - USB-UART (FTDI) confirmed working
+
+
+
+01-22
+
+### Observed Behavior
+- No UART output on power-up
+- No UART output after reset
+- Re-formatting SD card and re-copying BOOT.bin did not change behavior
+- FSBL execution could not be observed
+
+### Verification
+The following checks were performed to isolate the issue:
+- UART cable, COM port, and terminal settings verified
+- Same UART setup produced logs when booting from QSPI
+- BOOT.bin generation verified (bootgen completed successfully)
+- FSBL confirmed working when used in QSPI boot
+
+### Result
+| Boot Mode | UART Output |
+|----------|-------------|
+| QSPI     | Yes         |
+| SD       | No          |
+| JTAG     | No          |
+
+Based on these results, the issue was determined not to be BOOT.bin or FSBL,
+but the SD boot path on this board configuration.
+
+### Decision
+- SD card boot was abandoned as a primary bring-up path
+- QSPI was selected as the baseline boot device
+- Subsequent bring-up and debugging proceeded using QSPI
+- SD card retained only as secondary storage
