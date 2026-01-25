@@ -64,6 +64,62 @@ Based on these results, the issue was determined not to be BOOT.bin or FSBL,
 but the SD boot path on this board configuration.
 
 ### Decision
+
+
+---
+
+## 01-25 — Boot Flow Clarification & Bare-metal Execution Baseline
+
+On this date, the focus shifted from tool-driven bring-up to
+**architectural understanding of the Zynq boot flow** and
+establishing a clean, user-controlled execution baseline.
+
+#### Topics Clarified
+
+- **BootROM**
+  - Executes from on-chip ROM
+  - Not observable or modifiable by the user
+  - Responsible for boot mode sampling and FSBL loading
+
+- **FSBL (First Stage Boot Loader)**
+  - Bare-metal code executed after BootROM
+  - Initializes DDR and basic PS infrastructure
+  - User-buildable and debuggable, but practically treated as trusted code
+  - Not a user-space or OS-level component
+
+- **SSBL / OS Boundary**
+  - True user control begins after FSBL
+  - Bare-metal application and U-Boot are the first stages where
+    execution flow is fully user-defined
+
+#### Actions Taken
+
+- Created and committed a **bare-metal hello application**
+  - Executed immediately after FSBL
+  - No OS, no MMU, flat physical addressing
+  - UART-based input/output for execution validation
+
+- Analyzed and documented the **linker script–based memory map**
+  - Confirmed execution from DDR
+  - Clarified placement of `.text`, `.data`, `.bss`, stack, and heap
+  - Established baseline assumptions for DMA and cache behavior
+
+- Analyzed **platform_init() responsibilities**
+  - Cache enable (I/D cache)
+  - UART initialization (xil_printf availability)
+  - Explicit confirmation of what is *not* initialized (MMU, IRQs, DDR)
+
+#### Outcome
+
+- The exact boundary between BootROM, FSBL, and user-controlled code
+  is now clearly defined
+- A reproducible, minimal bring-up baseline is established
+- The project is prepared to move beyond BSP abstractions
+  toward direct hardware (MMIO) control
+
+This milestone marks the transition from
+“bring-up by example” to **bring-up by architectural ownership**.
+
 - SD card boot was abandoned as a primary bring-up path
 - QSPI was selected as the baseline boot device
 - Subsequent bring-up and debugging proceeded using QSPI
