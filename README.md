@@ -111,6 +111,8 @@ establishing a clean, user-controlled execution baseline.
 
 #### Outcome
 
+<img width="284" height="308" alt="terminal" src="https://github.com/user-attachments/assets/f6a6618c-4b34-4bfe-a8da-6304ca2be653" />
+
 - The exact boundary between BootROM, FSBL, and user-controlled code
   is now clearly defined
 - A reproducible, minimal bring-up baseline is established
