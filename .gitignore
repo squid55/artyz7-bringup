@@ -1,3 +1,4 @@
+
 ###############################################################################
 # Xilinx / Vitis generated files
 ###############################################################################
@@ -25,3 +26,23 @@ Release/
 .DS_Store
 Thumbs.db
 *~
+=======
+# Editor / OS
+*.swp
+*.tmp
+*.log~
+.DS_Store
+
+# Build artifacts (keep only final boot files explicitly)
+*.o
+*.a
+*.elf~
+*.bin~
+
+# Tool metadata
+.metadata/
+RemoteSystemsTempFiles/
+.idea/
+.vscode/
+
+
