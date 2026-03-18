@@ -1,0 +1,6 @@
+the_ROM_image:
+{
+  [bootloader] /home/hyeonjun/AMD/Vivado/source/test_/test_platform/zynq_fsbl/build/fsbl.elf
+  /home/hyeonjun/AMD/Vivado/source/test_/test_platform/export/test_platform/hw/design_1_wrapper.bit
+  /home/hyeonjun/AMD/Vivado/source/test_/test_app/build/test_app.elf
+}

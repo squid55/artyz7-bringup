@@ -1,48 +1,96 @@
+# Vivado generated files
+**/.Xil/
+**/*.jou
+**/*.log
+**/*.str
+**/*_backup.jou
+**/*_backup.log
+**/*.cache/
+**/*.runs/
+**/*.sim/
+**/*.hw/
+**/*.gen/
+**/*.ip_user_files/
 
-###############################################################################
-# Xilinx / Vitis generated files
-###############################################################################
-Debug/
-Release/
-.sdk/
-.metadata/
-.Xil/
-*.elf
-*.o
-*.d
-*.map
+# Vitis / Theia generated files
+**/.theia/
+**/_ide/_build/
+**/_ide/bitstream/
+**/_ide/psinit/
+**/build/
+**/Debug/
+**/Release/
+**/.metadata/
+**/.settings/
+**/.cache/
+**/.compile_commands/
 
-###############################################################################
-# IDE / Eclipse (Vitis is Eclipse-based)
-###############################################################################
-.project
-.cproject
-.settings/
-*.log
+# Build outputs
+**/*.o
+**/*.d
+**/*.a
+**/*.elf
+**/*.bin
+**/*.map
+**/*.mmi
+**/*.bit
+**/*.ltx
 
-###############################################################################
-# OS / Editor noise
-###############################################################################
-.DS_Store
-Thumbs.db
-*~
-=======
-# Editor / OS
+# Additional generated binaries
+**/*.dcp
+**/BOOT.BIN
+**/history/
+
+# OS/editor noise
+**/.DS_Store
+**/Thumbs.db
 *.swp
 *.tmp
 *.log~
-.DS_Store
+*~
 
-# Build artifacts (keep only final boot files explicitly)
-*.o
-*.a
-*.elf~
-*.bin~
+# Keep this repository focused on shared projects only
+*
+!.gitignore
+!README.md
+!test/
+!test/**
+!test_/
+!test_/**
 
-# Tool metadata
-.metadata/
-RemoteSystemsTempFiles/
-.idea/
-.vscode/
-
-
+# Re-apply generated-file ignores after allowlist block
+**/.Xil/
+**/*.jou
+**/*.log
+**/*.str
+**/*_backup.jou
+**/*_backup.log
+**/*.cache/
+**/*.runs/
+**/*.sim/
+**/*.hw/
+**/*.gen/
+**/*.ip_user_files/
+**/.theia/
+**/_ide/_build/
+**/_ide/bitstream/
+**/_ide/psinit/
+**/build/
+**/Debug/
+**/Release/
+**/.metadata/
+**/.settings/
+**/.cache/
+**/.compile_commands/
+**/*.o
+**/*.d
+**/*.a
+**/*.elf
+**/*.bin
+**/*.map
+**/*.mmi
+**/*.bit
+**/*.ltx
+**/*.dcp
+**/BOOT.BIN
+**/history/

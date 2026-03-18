@@ -66,3 +66,17 @@ BootROM → FSBL → **Bare-metal App (this repo)** → (optional) U-Boot → Li
 - No user/kernel separation at this stage
 - Flat physical addressing
 - Debuggable via JTAG
+
+---
+
+## Vivado/Vitis Shared Projects
+
+This repo also tracks project metadata for:
+- `test` (Vivado project)
+- `test_` (Vitis workspace)
+
+Rebuild notes:
+1. Use matching Vivado/Vitis version (recommended: 2023.2).
+2. Open `test/test.xpr` in Vivado.
+3. Export hardware (`.xsa`) if needed and update Vitis platform in `test_`.
+4. Rebuild app/platform in Vitis.

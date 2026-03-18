@@ -1,0 +1,2 @@
+arm-none-eabi-ar qc libv_tpg.a CMakeFiles/v_tpg.dir/xv_tpg.c.obj CMakeFiles/v_tpg.dir/xv_tpg_g.c.obj CMakeFiles/v_tpg.dir/xv_tpg_linux.c.obj CMakeFiles/v_tpg.dir/xv_tpg_sinit.c.obj
+/home/hyeonjun/AMD/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-ranlib libv_tpg.a

@@ -1,0 +1,18 @@
+{
+  "name": "test_app",
+  "type": "HOST",
+  "platform": "/home/hyeonjun/AMD/Vivado/source/test_/test_platform/export/test_platform/test_platform.xpfm",
+  "domain": "standalone_ps7_cortexa9_0",
+  "cpuInstance": "ps7_cortexa9_0",
+  "cpuType": "cortex-a9",
+  "os": "standalone",
+  "configuration": {
+    "componentType": "HOST",
+    "hostToolchainConfigurations": []
+  },
+  "domainRealName": "standalone_ps7_cortexa9_0",
+  "applicationFlow": "EMBEDDED",
+  "previousBuildStatusMap": {
+    "hw": "SUCCESS"
+  }
+}
